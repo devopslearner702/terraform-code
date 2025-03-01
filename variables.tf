@@ -32,6 +32,10 @@ variable "public_subnet_cidr" {
   description = "CIDR block for the public subnet"
   default     = ""
 }
+variable "public_subnet_cidr_1b" {
+  description = "CIDR block for the public subnet"
+  default     = ""
+}
 
 # Private subnet CIDR block
 variable "private_subnet_cidr" {
@@ -44,6 +48,10 @@ variable "availability_zone" {
   description = "The availability zone where resources will be created"
   default     = ""
 }
+variable "availability_zone_1b" {
+  description = "The availability zone where resources will be created"
+  default     = ""
+}
 
 # VPC name
 variable "vpc_name" {
@@ -53,6 +61,10 @@ variable "vpc_name" {
 
 # Public subnet name
 variable "public_subnet_name" {
+  description = "The name of the public subnet"
+  default     = "my-public-subnet"
+}
+variable "public_subnet_name_1b" {
   description = "The name of the public subnet"
   default     = "my-public-subnet"
 }
@@ -96,12 +108,10 @@ default     = ""
 variable "ec2_name" {
 default     = ""
 }
-variable "allow_ssh-sg" {
+variable "allow_ssh_http-sg" {
 default     = ""
 }
-variable "allow_http-sg" {
-default     = ""
-}
+
 variable "public_assign_ip" {
 default     = ""
 }
@@ -125,3 +135,11 @@ default     = ""
  variable "apache_logs_bucket"{
   default=""
  }
+ variable "web_lb_name"{
+  default=""
+}
+variable "type_LB"{}
+variable "ALB_Env" {}
+variable "web_alb_target_name"{}
+variable "web_alb_target_type" {}
+variable "allow_ALB_http_sg" {}

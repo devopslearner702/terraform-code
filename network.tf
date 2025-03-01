@@ -19,6 +19,17 @@ resource "aws_subnet" "public_subnet" {
   }
 }
 
+resource "aws_subnet" "public_subnet_1b" {
+  vpc_id     = aws_vpc.custom_vpc.id
+  cidr_block = var.public_subnet_cidr_1b
+  availability_zone = var.availability_zone_1b
+  map_public_ip_on_launch = true
+  tags = {
+    Name = var.public_subnet_name_1b
+  }
+}
+
+
 # Create the private subnet
 resource "aws_subnet" "private_subnet" {
   vpc_id     = aws_vpc.custom_vpc.id
