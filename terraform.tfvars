@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # terraform.tfvars
 
 region               = "us-east-1"
@@ -13,20 +12,16 @@ public_route_table   = "my-public-rt"
 private_route_table  = "my-private-rt"
 internet_gateway     = "my-igw"
 aws_eip_name         = "my_eip"
-=======
-# terraform.tfvars
-
-region               = "us-east-1"
-vpc_cidr             = "10.0.0.0/16"
-public_subnet_cidr   = "10.0.1.0/24"
-private_subnet_cidr  = "10.0.2.0/24"
-availability_zone    = "us-east-1a"
-vpc_name             = "my-custom-vpc"
-public_subnet_name   = "my-public-subnet"
-private_subnet_name  = "my-private-subnet"
-public_route_table   = "my-public-rt"
-private_route_table  = "my-private-rt"
-internet_gateway     = "my-igw"
-aws_eip_name         = "my_eip"
->>>>>>> fd0bbb365307938f72d1c01f3bff50506609aa7a
-aws_nat_gateway_name  ="my-nat-gtw"
+aws_nat_gateway_name = "my-nat-gtw"
+ami_id               = "ami-04b4f1a9cf54c11d0"
+instance_type        = "t2.micro"
+key_name             = "us-east-1_key"
+ec2_name             = "web_server-1a"
+allow_ssh-sg         = "ssh"
+allow_http-sg        = "http"
+public_assign_ip     = "true"
+prublic_AZ           = "us-east-1a"
+user_data            = "./user_data.sh"
+terraform_state      = "ranjith_demo_tf"
+apache_logs_bucket   = "ranjithlogs123"
+acl_name             = "private"
