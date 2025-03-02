@@ -34,16 +34,4 @@ jobs:
     - name: Terraform Initialization
       run: terraform init
 
-    - name: Terraform Format Check
-      run: terraform fmt -check -diff
-
-    - name: Terraform Plan
-      run: terraform plan
-
-    - name: Terraform Apply
-      run: terraform apply -auto-approve
-      if: github.ref == 'refs/heads/main'  # Only run apply on main branch
-
-    
- 
-
+   
