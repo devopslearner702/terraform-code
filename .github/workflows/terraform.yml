@@ -44,6 +44,6 @@ jobs:
       run: terraform apply -auto-approve
       if: github.ref == 'refs/heads/main'  # Only run apply on main branch
 
-    - name: Set output value
-      run: echo "MY_VAR=value" >> $GITHUB_ENV
+    
+ 
 
